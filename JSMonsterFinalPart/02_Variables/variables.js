@@ -1,146 +1,134 @@
-// console hamara print karta hai output ko screen pe
+// console use to Print the output
 // console.log("hello")
 
-// ye hmara single line comment hai aljdsflk as;ld lkds jlksajd flkajdsflkjasdlkfj lakdsj f;lkajdslfkj sadlkjflksadj flkjdsa lfk jlsakdjflk jdsa
+// Example of Single line comment 
 
 /*
-ye hamara
-multiple line
-comment hai
+Example of 
+Multiline
+Commentye
 */
 
-// let age;
-// age = 24
-// console.log(age)
+let age = 20
+console.log(age)
 
-// let name = "Manas Kumar Lal"
-// name = "ram"
-// console.log(name)
+let userName = "Muhammad Arslan"
+userName = "HM-Arslan"
+console.log(userName)
 
-// let alpha = "lakjdslkfj sadlfkj s;dlf jaf";
-// console.log(alpha)
-
+// Variable Declaration
 // let a;
 // let b;
 // let c;
 
+// Variable Initializaion
 // a = 10;
 // b = 20;
 // c = 30;
 
+// Declaration + Initializaion
 // let a = 10;
 // let b = 20;
 // let c = 30;
 
+// Declaration of 3 Variables at one (Not Recommended)
 // let a,b,c;
 // a = 10;
-// b=20;
-// c=30;
+// b = 20;
+// c = 30;
 
-// let a = 10;
-// let b;
-// let c;
-
-
-
+// Print output
 // console.log(a,b,c)
 // console.log(a)
 // console.log(b)
 // console.log(c)
 
+// This is not Allowed in let & const 
 // let a = 1;
 // let a = 10;
 
+// Allowed in var
+// let a = 1;
+// let a = 10;
 
-// {
-//     let age = 1;
-//     let name = "manas"
-//     console.log(age);
-//     console.log(name)
-// }
+// let & const are Block Scoped
 
-// console.log(age);
-// console.log("hello")
+{
+    let uName = "Arslan"
+    let uAge = 20
+    console.log(uName + " " + uAge)
+}
+// console.log(uName + " " + uAge) // Not Accessable outside the Block
 
-// const pi = 3.14;
-// const a = 10;
-// // a = 15;
 
-// // pi = 2;
-// console.log(pi)
+{
+    var uCountry = "Pakistan";
+    var uCity = "Lahore"
+    console.log(uCountry + " " + uCity, " : Inside the Block")
+}
 
-// let alpha;
-// console.log(alpha)
+console.log(uCountry + " " + uCity, " : Outside the Block") // Accessable
 
-// let name = "halwa"
-// let Name = "gazar ka halwa"
-// console.log(name)
-// console.log(Name)
 
+// Constants
+const pi = 3.14
+const directions = 4
+const OOP  = "Object Oriented Programming"
+
+const finalScore = 10
+// finalScore = 20 // Not Allowed: Assignment to constant variable.
+
+let futureVal;
+console.log(futureVal) // Initialized But Undefined
+
+// Variable can be written like following ways
 // let name;
 // let name1;
 // let name_;
 // let name$;
-
 // let $name;
-
 // let full_name;
 
-// let price1 = 499;
-// let price2 = 299;
+let product1Price = 300;
+let product2Price = 200
+let totalPrice = product1Price + product2Price
+console.log(totalPrice)
 
-// let totalPrice = price1 + price2;
-// console.log(totalPrice)
-
-// let name = prompt("Enter name");
-// let lastName = prompt("Enter last name");
-// let fullName = name + " " + lastName;
+// Taking Input using BOM (Browser Object Model)
+// let firstName = prompt("Enter your first name")
+// let lastName = prompt("Enter your last name")
+// let fullName = firstName + " " + lastName
 // console.log(fullName)
 
-/*
-let a = 1
-a = "alpha"
+// Data Types
+let str = "This is a String"
+let num = 100
+const symbolA = Symbol("id");
+const symbolB = Symbol("id");
+console.log(symbolA === symbolB)
+let isLoggedIn = true
+let bigInteger = BigInt(12000000000000000000000000000000000000000000000000000000)
+let temp = null
+let currentSessionScore = undefined
+let arr = ['Apple', 120, true, undefined, null]
+let obj = {uName: "Arslan", uAge: 20}
 
-a = true
-console.log(typeof a)
-console.log(typeof(a))
+let numOne = "20"  + 2 // Concat and return 202
+let numTwo = "20" - 2 // Subtract and return 18
+console.log(typeof(numOne), ": " ,numOne)
+console.log(typeof(numTwo), ": " ,numTwo)
+console.log(typeof("Str")) // String
+console.log(typeof(20)) // Number
+console.log(typeof(null)) // Object
+console.log(typeof(undefined)) // Undefined
+console.log(typeof(bigInteger)) // bigint
 
-let a1 = "2" + 2;
-let a2 = "2" - 2
-console.log(a1, typeof a1)
-console.log(a2, typeof a2)
-
-alpha = 22;
-console.log(alpha)
-*/
-
-// console.log(beta)
-
-// let name;
-// let name1 = null;
-// console.log(name, typeof name)
-// console.log(name1, typeof name1)
-
-// let number = BigInt(23432432);
-
-
-// console.log(number, typeof number)
-
-// let isLoggedIn = false;
-// console.log(isLoggedIn, typeof isLoggedIn)
-
-// let str = "23";
-// let num = Number(str);
-// console.log(num, typeof num)
-
-let num = Number(prompt("Enter a number"));
-console.log(num, typeof num);
-
+// Variales Naming Conventions
 // camelCase
-let userName = "XYZ"
+// let userName = "XYZ"
 
 // Snake_Case
-let user_name = "XYZ"
+// let user_name = "XYZ"
 
 // PascalCase
-let UserName = "XYZ"
+// let UserName = "XYZ"
