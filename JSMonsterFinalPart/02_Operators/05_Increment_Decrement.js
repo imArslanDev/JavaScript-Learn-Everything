@@ -7,5 +7,5 @@
 // console.log(a)
 
 let a = 10;
-let result = a++ + ++a - 10;
-console.log(result)
+let result = a++ + ++a - 10; //  12
+console.log(result);
