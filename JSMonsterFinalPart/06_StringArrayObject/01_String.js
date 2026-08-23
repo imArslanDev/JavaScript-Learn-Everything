@@ -2,6 +2,20 @@
 // let middleName = "Kumar";
 // let lastName = "Lal";
 
+// Note: Strings are immutable in JS means you cannot change the original string
+// But you ca use that string to create new string
+
+// Diff b/w Properties or Methods?
+// Properties provide info like str.length
+// Methods perform some task like toUpperCase() will change the text into UPPERCASE
+
+let str = "Hello";
+str.toUpperCase();
+// Original String will not change so make the copy of it to change
+console.log(str); // Hello
+let strCopy = str.toUpperCase();
+console.log(strCopy);
+
 // let fullName = firstName + " " + middleName + " " + lastName;
 // console.log(fullName)
 // let fullName2 = `${firstName} ${middleName} ${lastName}`
@@ -17,7 +31,6 @@
 
 // let gamma = `str = ${2+3+5+8-9}`
 // console.log(gamma)
-
 
 // let str = new String("Manas")
 // console.log(str)
@@ -48,7 +61,6 @@
 //     console.log(key)
 // }
 
-
 // methods
 // let str = "Hello"
 // let upperCaseStr = str.toUpperCase();
@@ -67,7 +79,6 @@
 // console.log(fullName)
 // console.log(fullName2)
 
-
 // let str = "I am a boy, and i am a boy"
 // let check = str.includes("bts");
 // console.log(check)
@@ -85,11 +96,9 @@
 // let str = "alpha beta gamma"
 // console.log(str.split(" "))
 
-
 // let str = "i am a boy"
 // str = str.replace("boy", "girl")
 // console.log(str)
-
 
 // question1
 // let fullName = prompt("Enter your full name");
@@ -120,3 +129,17 @@
 
 // let str = "hello i am a boy alsdjf ldsjflds f"
 // console.log(str.split(" ").length)
+
+// let messyStr = "Ma   r   vel";
+// let cleanedStr = messyStr.replaceAll(" ", "");
+// console.log("Messy String:", messyStr);
+// console.log("Cleaned String:", cleanedStr);
+
+// Clean String with loop
+// let cleanStr = "";
+// for (let i = 0; i < messyStr.length; i++) {
+//   if (messyStr[i] !== " ") {
+//     cleanStr += messyStr[i];
+//   }
+// }
+// console.log(cleanStr);

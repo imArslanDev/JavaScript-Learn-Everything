@@ -1,23 +1,13 @@
-// function alpha() {
-//     console.log("hello bhai")
-// }
+function sayHello() {
+  console.log("Hello");
+}
+sayHello();
 
-// alpha();
-
-// function beta(){
-//     return "Mkl";
-// }
-
-
-// let a = beta();
-// console.log(a);
-
-// function gamma(str){
-//     console.log("hello bro", str)
-// }
-
-// gamma("manas");
-
+function returnString() {
+  return "HMA";
+}
+let res = returnString();
+console.log(res);
 
 // function greet(name){
 //     console.log(1)
@@ -29,7 +19,6 @@
 // let a = greet("Lambda");
 // console.log(a);
 
-
 // function greet(name=2+3+5-2){
 //     console.log(name);
 // }
@@ -40,6 +29,7 @@
 //     return a + b;
 // }
 
+// Funtion Expression
 // let sum2 = function(a, b){
 //     return a + b;
 // }
@@ -66,7 +56,6 @@
 //     console.log("hello")
 // })();
 
-
 // greet();
 // greet2();
 
@@ -74,11 +63,9 @@
 //     console.log("hello")
 // }
 
-
 // let greet2 = () =>{
 //     console.log("hello 2")
 // }
-
 
 // question1
 
@@ -87,7 +74,6 @@
 // }
 
 // capitalizeFirstLetter("alpha beta gamm")
-
 
 // setTimeout(() => {
 //     alert("Please Login")
@@ -101,25 +87,23 @@
 // let result = calculateDicountedPrice(1550, 15);
 // console.log(result)
 
-
 // function generateUsername (fullName){
 //     return "@" + fullName
 // }
 
 // console.log(generateUsername("manas"))
 
+// function generateInstructions(color) {
+//   if (color === "green") {
+//     return "go";
+//   } else if (color === "red") {
+//     return "stop";
+//   } else if (color === "yellow") {
+//     return "caution";
+//   } else {
+//     return "invalid color";
+//   }
+// }
 
-function generateInstructions(color) {
-    if (color === 'green') {
-        return "go"
-    } else if (color === 'red') {
-        return "stop"
-    } else if (color === 'yellow') {
-        return "caution"
-    } else {
-        return "invalid color"
-    }
-}
-
-let inst = generateInstructions("aldsjflkdsj")
-console.log(inst)
+// let inst = generateInstructions("aldsjflkdsj");
+// console.log(inst);
