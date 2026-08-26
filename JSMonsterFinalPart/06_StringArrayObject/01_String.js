@@ -1,106 +1,89 @@
-// let firstName = "Manas";
-// let middleName = "Kumar";
-// let lastName = "Lal";
-
 // Note: Strings are immutable in JS means you cannot change the original string
-// But you ca use that string to create new string
+// But you can use that string to create new string
 
 // Diff b/w Properties or Methods?
-// Properties provide info like str.length
+// Properties provide info like str.length provide string length
 // Methods perform some task like toUpperCase() will change the text into UPPERCASE
 
 let str = "Hello";
-str.toUpperCase();
-// Original String will not change so make the copy of it to change
-console.log(str); // Hello
-let strCopy = str.toUpperCase();
-console.log(strCopy);
+let upperCaseStr = str.toUpperCase(); // Will Not Change Original String
+// console.log(str); // Hello
+// console.log(upperCaseStr); // HELLO
 
-// let fullName = firstName + " " + middleName + " " + lastName;
-// console.log(fullName)
-// let fullName2 = `${firstName} ${middleName} ${lastName}`
-// console.log(fullName2)
+let firstName = "Hafiz";
+let middleName = "Muhammad";
+let lastName = "Arslan";
 
-// console.log(`My name is ${fullName}`)
-
-// let a = 10;
-// let b = 20;
-// let c = 30;
-// let str = `Number 1 = ${a} Number 2 = ${b} Number 3 = ${c}`
-// console.log(str)
-
-// let gamma = `str = ${2+3+5+8-9}`
-// console.log(gamma)
+let fullName = firstName + " " + middleName + " " + lastName;
+let fullNameStringInterpolation = `${firstName} ${middleName} ${lastName}`; // Prefferd
+// console.log(fullName);
+// console.log(fullNameStringInterpolation);
 
 // let str = new String("Manas")
-// console.log(str)
+// String Constrcutor
+let stringConstructor = new String("Arslan");
+// console.log(stringConstructor);
 
-// str = "school4u"
-// str2= "school\n4u" //10
-// str3 = "Hello \\n beta"
-// console.log(str, str.length)
-// console.log(str2, str2.length)
-// console.log(str3, str3.length)
+// Escape Sequences Characters
+let str2 = "Calm \n Down";
+// console.log(str2);
+let str3 = "Hello\\Bhai";
+// console.log(str3.length);
+// console.log(str3);
 
-// let str = "hello world"
+// Index Base Access
+let sentence = "Where there is a will there is a way";
+// console.log(sentence[0]);
+// console.log(sentence[4]); // Negative Index not Supported
+// console.log(sentence[10]);
 
-// console.log(str[1])
-// console.log(str[5])
-// console.log(str[7])
+// let changeStr3rdIndexCharc = (sentence[3] = "A");
+// console.log(sentence); // Orignal String Remain Same Becuse Strings are Immutable
 
-// str[7] = "u";
-// console.log(str) // hello wurld
+// Looping on String
+let strNew = "";
+for (let ch of sentence) {
+  strNew += ch + " ";
+}
+console.log(strNew);
 
-// let str2 = "";
-// for(let ch of str){
-//     str2 = str2 + ch + " ";
-// }
-// console.log(str2)
+for (let index in sentence) {
+  console.log(sentence[index]);
+  console.log(typeof index);
+}
 
-// for(let key in str){
-//     console.log(key)
-// }
+// String Methods
+// let string = "Hello"
+// string.toUpperCase()
+// string.toLowerCase()
+// str.trim();
+// firstName.concat(middleName, lastName); // HafizMuhammadArslan
 
-// methods
-// let str = "Hello"
-// let upperCaseStr = str.toUpperCase();
-// let lowerCaseStr = str.toLowerCase();
-// let trimmedStr = str.trim();
-// console.log(str, upperCaseStr, lowerCaseStr);
-// console.log(str)
-// console.log(trimmedStr)
+let sentence2 =
+  "Once there was a crow he was very thirsty he flew here and there in search of water Words IOS, IOS";
+let check = sentence2.includes("was");
+console.log(check);
+console.log(sentence2.indexOf("w"));
+console.log(sentence2.charAt(15));
+console.log(sentence2.replace("crow", "Crow"));
+console.log(sentence2.replaceAll("IOS", "Apple"));
 
-// let firstName = "manas"
-// let middleName = "kumar"
-// let lastName = "lal"
-// let fullName = firstName + middleName + lastName
-// let fullName2 = firstName.concat(middleName, lastName)
-// console.log(firstName)
-// console.log(fullName)
-// console.log(fullName2)
+let username = "im@Arslan";
+console.log(username.slice(-9));
+console.log(username.slice(2, 5));
+console.log(username.substring(1, 5)); // m@Ar
 
-// let str = "I am a boy, and i am a boy"
-// let check = str.includes("bts");
-// console.log(check)
-// console.log(str.indexOf("z"))
-// console.log(str.charAt(2))
+let capitalizedSentence = sentence2
+  .split(" ")
+  .filter(Boolean)
+  .map((item) => item[0].toUpperCase() + item.slice(1))
+  .join(" ");
+console.log(capitalizedSentence);
 
-// console.log(str.replace("boy", "girl"))
-// console.log(str.replaceAll("boy", "girl"))
+let replaceStr = "i am a boy";
+console.log(replaceStr.replace("boy", "Boy"));
 
-// let username = "@manaskumarlal"
-
-// console.log(username.slice(-8,11))
-// console.log(username.substring(-8,11))
-
-// let str = "alpha beta gamma"
-// console.log(str.split(" "))
-
-// let str = "i am a boy"
-// str = str.replace("boy", "girl")
-// console.log(str)
-
-// question1
+// Q-1 Solution
 // let fullName = prompt("Enter your full name");
 
 // let username =  `@${fullName.trim().replaceAll(" ","")}_${fullName.length}`
