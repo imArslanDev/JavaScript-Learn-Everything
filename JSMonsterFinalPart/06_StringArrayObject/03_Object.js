@@ -6,20 +6,22 @@
 
 // console.log(obj)
 
-
 let car = {
-    "brand": "lamborgini",
-    "color": "red",
-    maxSpeed: 180,
-    "full name": "manas kumar lal",
-    stop: () => {
-        console.log("stopping the car...")
-    },
-    start: function () {
-        console.log("starting the car...")
-    }
-}
+  brand: "lamborgini",
+  color: "red",
+  maxSpeed: 180,
+  "full name": "manas kumar lal",
+  stop: () => {
+    console.log("stopping the car...");
+  },
+  start: function () {
+    console.log("starting the car...");
+  },
+};
 
+let entries = Object.entries(car);
+let flatEntries = entries.flat(Infinity);
+console.log(flatEntries);
 // console.log(car);
 // console.log(car.brand)
 // car.start()
@@ -31,14 +33,13 @@ let car = {
 // car["start"]()
 // console.log(car[test])
 
-
 // let obj = new Object({
 //     name: "manas"
 // })
 
 // let obj2 = {
 //  falna: "laskjdf",
-//  dhikna: "ldkjfldsf"   
+//  dhikna: "ldkjfldsf"
 // }
 
 // obj.age = 19
@@ -58,7 +59,6 @@ let car = {
 // delete obj.age;
 
 // console.log(obj)
-
 
 // let obj = {
 //     name: "alpha",
@@ -81,7 +81,6 @@ let car = {
 //     console.log(obj[test])
 // }
 
-
 // let obj = {
 //     name: "alpha",
 //     age: 24,
@@ -99,7 +98,6 @@ let car = {
 // delete obj.name;
 // obj.name = "manas kumar lal"
 
-
 // console.log(obj.hasOwnProperty("alpha"))
 
 // let obj = {
@@ -108,12 +106,10 @@ let car = {
 //     age: 24
 // }
 
-
 // let name = obj.name;
 // let city = obj.city;
 
 // let {city, name, age} = obj;
-
 
 // let arr = [1,"lskdjf", {name:"something"}]
 
@@ -121,7 +117,6 @@ let car = {
 
 // console.log(name, city, age);
 // console.log(a)
-
 
 // // question 1:
 
@@ -134,11 +129,9 @@ let car = {
 // person.email = "example@gmail.com"
 // delete person.city
 
-
 // for(let key in person){
 //     console.log(`Value of ${key} is ${person[key]}`)
 // }
-
 
 // question2:
 
@@ -154,7 +147,6 @@ let car = {
 
 // let fullName = convertToFullName(obj)
 // console.log(fullName)
-
 
 // // question3:
 
@@ -191,7 +183,6 @@ let car = {
 // let resultArray = filterArray(arr, 'superAdmin')
 // console.log(resultArray)
 
-
 // // question5:
 
 // let products = [
@@ -209,36 +200,33 @@ let car = {
 
 // search(products, "2");
 
-
 // // questin 6:
 
 let comments = [
-    { postId: 1, comment: "hello" },
-    { postId: 2, comment: "owesome video bhaiya" },
-    { postId: 1, comment: "how are you" },
-    { postId: 1, comment: "hello" },
-    { postId: 2, comment: "owesome video bhaiya" },
-    { postId: 1, comment: "how are you" }
-]
-
+  { postId: 1, comment: "hello" },
+  { postId: 2, comment: "owesome video bhaiya" },
+  { postId: 1, comment: "how are you" },
+  { postId: 1, comment: "hello" },
+  { postId: 2, comment: "owesome video bhaiya" },
+  { postId: 1, comment: "how are you" },
+];
 
 function groupByPost(comments) {
-    let groupedComments = {}
+  let groupedComments = {};
 
-    comments.forEach(obj => {
-        let { postId, comment } = obj;
-        if (groupedComments.hasOwnProperty(postId)) {
-            groupedComments[postId].push(comment)
-        } else {
-            groupedComments[postId] = [comment]
-        }
-    });
+  comments.forEach((obj) => {
+    let { postId, comment } = obj;
+    if (groupedComments.hasOwnProperty(postId)) {
+      groupedComments[postId].push(comment);
+    } else {
+      groupedComments[postId] = [comment];
+    }
+  });
 
-    console.log(groupedComments)
-
+  console.log(groupedComments);
 }
 
-groupByPost(comments)
+// groupByPost(comments);
 
 // // question 7:
 
@@ -257,7 +245,6 @@ groupByPost(comments)
 //     let finalUrl = url.slice(0, url.length-1)
 //     return finalUrl
 // }
-
 
 // let url = createUrl(params)
 // console.log(url)

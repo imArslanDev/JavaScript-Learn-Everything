@@ -9,27 +9,34 @@
 
 // let normalArr = [1,3,5];
 // console.log(normalArr)
-// // let arr = new Array(2, 3, 4, 5, "alsjdlfjds") ❌
+// let arr = new Array(2, 3, 4, 5, "alsjdlfjds"); //❌ We normaly not use Array constructor to creat an array
 // console.log(arr)
 
-// let arr = [20]
-// let carr = new Array(20).fill(0)
-// console.log(arr)
-// console.log(carr)
+// Use case of Array Constructor
+// let arr = [20];
+// let carr = new Array(20).fill(0);
+// console.log(arr);
+// console.log(carr);
 
 // console.log(arr.length)
 // console.log(carr.length);
 
+// Array is a special type of Object
 // console.log(typeof arr);
-
 
 // let arr = [1, 3, 5, 8];
 // console.log(arr[0])
 // console.log(arr[2])
+// Arrays are Mutable which means i can change the values in Array
+// which is not allowed in Strings BCZ Strings are Immutable
+// IMP: Be carefull when working with Array Methods so that we know which method
+// is chaging actual array and which one returning a New Aray
 // arr[2] = 99;
 // console.log(arr)
 // arr[0] = 100;
 // console.log(arr)
+
+// Check Each Method use here yourself and investigate which method change the original array or wihch return new array
 
 // let arr = [1, 3, 5, 100, 99];
 // for(let i=0; i < arr.length; i++){
@@ -56,7 +63,6 @@
 // console.log(arr, a);
 // let b = arr.shift();
 // console.log(arr, b);
-
 
 // let newArr = arr.slice(-5, 3);
 // console.log(arr);
@@ -130,7 +136,7 @@
 //     return elem > 5
 // })
 
-// let result = arr.reduce((acc, curr)=>{ 
+// let result = arr.reduce((acc, curr)=>{
 //     return acc + curr
 // }, 10)
 
@@ -145,7 +151,6 @@
 // arr3.pop();
 // console.log(arr1);
 // console.log(arr3);
-
 
 // let arr = [1,2,3, [99, 100]]
 // let copyArr = [...arr];
@@ -166,13 +171,12 @@
 // console.log(`sum = ${sum}`)
 // console.log(`average = ${average}`)
 
-
 // // question2
 // let n = 25;
 // let arr = new Array(25).fill(0)
 // console.log(arr);
 
-// // question3 
+// // question3
 // let n = 25;
 // let arr = new Array(25).fill(0)
 // arr.forEach((_, index)=>{
@@ -191,7 +195,6 @@
 
 // console.log(arr.includes("captain"))
 
-
 // let test = "strisldfksdf"
 // let test2 = "sldkjfl"
 // console.log(Array.isArray(test))
@@ -204,7 +207,6 @@
 // }
 // let d = [1, 2, 3]
 // console.log(Array.of(a, b, c, d))
-
 
 // let str = "ollo"
 // let revStr = str.split("").reverse().join("")
