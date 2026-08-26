@@ -1,28 +1,24 @@
-// let arr = [4, 5, 10, 23];
-// let arr2 = ["apple", "mango", "lichi"];
-// let arr3 = ["manas", 15, "bhagalpur"];
-// let arr4 = [2, 3, 4 , "mkl", [2, 3 ,5 ]]
+let arr = [4, 5, 10, 23];
+let arr2 = ["apple", "mango", "lichi"];
+let arr3 = ["Arslan", 60, "Lahore"];
+let arr4 = [1, 2, 3, "imArslan", [4, 5, 6]];
+
 // console.log(arr);
 // console.log(arr2);
 // console.log(arr3);
 // console.log(arr4);
 
-// let normalArr = [1,3,5];
-// console.log(normalArr)
-// let arr = new Array(2, 3, 4, 5, "alsjdlfjds"); //❌ We normaly not use Array constructor to creat an array
-// console.log(arr)
+// Array Constructor
+let newArray = new Array("Arslan", "King", "Khan", 10, 20, 30, 40);
+console.log(newArray);
 
 // Use case of Array Constructor
-// let arr = [20];
-// let carr = new Array(20).fill(0);
-// console.log(arr);
-// console.log(carr);
+let arrayFilledWith20Zero = new Array(20).fill(0);
+console.log(arrayFilledWith20Zero);
+// console.log(arrayFilledWith20Zero.length);
 
-// console.log(arr.length)
-// console.log(carr.length);
-
-// Array is a special type of Object
-// console.log(typeof arr);
+// IMP: Array is a special type of Object
+console.log(typeof arrayFilledWith20Zero);
 
 // let arr = [1, 3, 5, 8];
 // console.log(arr[0])
@@ -36,12 +32,13 @@
 // arr[0] = 100;
 // console.log(arr)
 
-// Check Each Method use here yourself and investigate which method change the original array or wihch return new array
+// Check Each Method yourself and investigate which method change the original array or wihch return new array
 
-// let arr = [1, 3, 5, 100, 99];
-// for(let i=0; i < arr.length; i++){
-//     console.log(arr[i] * 2);
-// }
+let arrOne = [1, 3, 5, 100, 99];
+for (let i = 0; i < arrOne.length; i++) {
+  // console.log(arr[i] * 2);
+  console.log(arrOne[i]);
+}
 
 // for(let elem of arr){
 //     console.log(elem)

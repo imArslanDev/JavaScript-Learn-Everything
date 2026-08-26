@@ -9,13 +9,11 @@
 5. Event Listeners (event ko kaise suna jaaaye)
 
 */
-
 // let h1 = document.querySelector('h1');
 // h1.innerHTML = "meri girlfriend hai hi nai"
 
 // let p = document.querySelector('p');
 // p.innerHTML = "jo karna hai mere samne karo mai bhi dekhna chahta hun"
-
 
 // let a = document.querySelector('h1');
 // a.style.backgroundColor = 'rgba(0,255,0)'
@@ -25,14 +23,12 @@
 // b.style.backgroundColor = 'rgba(0,255,0)'
 // b.style.color = 'black'
 
-
 // let h1 = document.querySelector('h1');
 // h1.addEventListener('click', ()=>{
 //     h1.style.backgroundColor = 'green'
 //     h1.style.color = 'black'
 //     h1.innerHTML = 'meri girlfriend bhaut hi jyada wo hai'
 // })
-
 
 // let box = document.querySelector('div');
 
