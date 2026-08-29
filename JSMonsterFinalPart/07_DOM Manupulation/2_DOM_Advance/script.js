@@ -13,7 +13,6 @@
 
 // console.log(document.getElementsByClassName('hi'))
 
-
 // let a = document.querySelector('.hi')
 // console.log(a)
 
@@ -25,7 +24,6 @@
 
 // console.log(falna.childNodes)
 // console.log(falna.lastChild)
-
 
 // HOW TO MANIPULATE HTML
 
@@ -43,7 +41,6 @@ attribute
 // h1.nodeName = 'P'
 // console.log(h1.tagName)
 
-
 // h1.innerText = '        banki jo bacha  \n         tha kale chor le gye'
 // console.log(h1.innerText)
 // console.log(h1.textContent)
@@ -57,7 +54,6 @@ attribute
 // console.log(h1.innerText)
 // console.log(h1.textContent)
 // console.log(h1.innerHTML)
-
 
 // inserting elements
 
@@ -75,7 +71,6 @@ attribute
 // let p = div.children[3];
 // p.remove();
 
-
 // let alpha = document.querySelector('#alpha');
 // alpha.style.backgroundColor = 'blue';
 
@@ -85,11 +80,8 @@ attribute
 // let newElem = document.createElement('div');
 // newElem.innerText = "hello";
 
-
 // parentNode.replaceChild(newElem, alpha)
 // parentNode.removeChild(newElem)
-
-
 
 // parentNode.insertBefore(newElem)
 
@@ -110,7 +102,6 @@ attribute
 // div.setAttribute('class', `${classValue} random`)
 // console.log(div.attributes.class.value)
 
-
 // // question 1
 // let p = document.createElement('p');
 // p.innerText = "mai tumse pyar karta hun"
@@ -121,13 +112,11 @@ attribute
 // let body= document.querySelector('body');
 // body.append(p);
 
-
 // // question 2
 // let button = document.createElement('button');
 // button.innerText = "click me";
 
 // p.prepend(button);
-
 
 // let div = document.querySelector('.box')
 // div.setAttribute('class', `${div.getAttribute('class')} box2`)
@@ -149,18 +138,14 @@ attribute
 //     }
 // }
 
-
 // let div = document.querySelector('.box')
 
 // changeTagName(div, 'p')
 
-
 // let div = document.querySelector('div');
-
 
 // div.setAttribute('style', 'background-color:red')
 // div.setAttribute('class', 'redBg')
-
 
 // div.style.backgroundColor = 'blue'
 // div.style.fontSize = '60px'
@@ -180,12 +165,10 @@ attribute
 // let isAvailable = div.classList.contains('blueBg')
 // console.log(isAvailable)
 
-
 // div.classList.toggle('blueBg')
 // div.classList.toggle('blueBg')
 
 // console.log(div.className)
-
 
 // let button = document.querySelector('button')
 // let body = document.querySelector('body');
