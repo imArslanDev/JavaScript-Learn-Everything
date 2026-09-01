@@ -7,8 +7,8 @@
 
 let str = "Hello";
 let upperCaseStr = str.toUpperCase(); // Will Not Change Original String
-// console.log(str); // Hello
-// console.log(upperCaseStr); // HELLO
+console.log(str); // Hello
+console.log(upperCaseStr); // HELLO
 
 let firstName = "Hafiz";
 let middleName = "Muhammad";
@@ -19,10 +19,10 @@ let fullNameStringInterpolation = `${firstName} ${middleName} ${lastName}`; // P
 // console.log(fullName);
 // console.log(fullNameStringInterpolation);
 
-// let str = new String("Manas")
 // String Constrcutor
 let stringConstructor = new String("Arslan");
-// console.log(stringConstructor);
+// console.log(Object.values(stringConstructor));
+console.log(stringConstructor);
 
 // Escape Sequences Characters
 let str2 = "Calm \n Down";

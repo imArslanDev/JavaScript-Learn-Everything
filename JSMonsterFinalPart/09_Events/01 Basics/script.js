@@ -2,6 +2,8 @@
 // let parent = document.querySelector('.parent')
 // let child = document.querySelector('.child')
 
+// Note: You need to understand with example about Event Popogatio,
+// Event Bubbling and Event Capturing with Practical Examples & Waht is Trickling
 // // grandParent.addEventListener('click',function(){
 // //     alert("grand parent pe click hua")
 // // })
@@ -26,8 +28,6 @@
 // //     alert("Child Pe kam hua")
 // // }, true)
 
-
-
 // grandParent.addEventListener('click', function (event) {
 //     console.log("GRAND PARENT")
 //     console.log(event.target)
@@ -37,7 +37,6 @@
 // parent.addEventListener('click', function (event) {
 //     console.log("this is an another click event")
 // })
-
 
 // parent.addEventListener('click', function (event) {
 //     console.log("PARENT")
@@ -50,14 +49,11 @@
 //     console.log("this is an third click event")
 // })
 
-
-
 // child.addEventListener('click', function (event) {
 //     console.log('CHILD')
 //     console.log(event.target)
 //     console.log(event.currentTarget)
 // })
-
 
 // parent.addEventListener('click', function(){
 //     console.log("PARENT")
@@ -66,8 +62,7 @@
 //     console.log(this)
 // })
 
-
-let container = document.querySelector('.container')
+let container = document.querySelector(".container");
 
 // container.childNodes.forEach((elem)=>{
 //     elem.addEventListener('click',()=>{
@@ -75,9 +70,9 @@ let container = document.querySelector('.container')
 //     })
 // })
 
-container.addEventListener('click',function(event){
-    let targetElem = event.target;
-    if(targetElem.className === 'box'){
-        console.log(targetElem.textContent)
-    }
-})
+container.addEventListener("click", function (event) {
+  let targetElem = event.target;
+  if (targetElem.className === "box") {
+    console.log(targetElem.textContent);
+  }
+});

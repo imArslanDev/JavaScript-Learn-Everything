@@ -1,7 +1,7 @@
 // Function Declaration
-function sayHi() {
-  console.log("Hi Bro");
-}
+// function sayHi() {
+//   console.log("Hi Bro");
+// }
 
 // Function Expression
 let sayHello = function () {
@@ -40,7 +40,7 @@ function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-let myName = capitalizeFirstLetter("arslan");
+let myName = capitalizeFirstLetter("king");
 console.log(myName);
 
 // Q-2 Solution
