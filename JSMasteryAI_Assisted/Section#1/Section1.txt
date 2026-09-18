@@ -1,0 +1,13 @@
+Check Account Balance 
+Check Withdrawls Ammount
+
+IF Account Balance <= 0
+    "Transcation Failed Becuase Balance is 0"
+IF Account Balance < Withdrawl Ammount 
+    "Transcation Failed Becuase Balance is Low"
+IF Account Balance >= Withdrawl Ammount
+    Account Balance - Withdrawl Ammount
+    "Transcation Successfull"
+
+Reaming Balance = Account Balance - Withdrawl Ammount
+"Your Reaming Balance is: Account Balance - Withdrawl Ammount"
