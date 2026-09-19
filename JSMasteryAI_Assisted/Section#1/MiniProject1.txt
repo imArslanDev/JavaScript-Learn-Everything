@@ -1,0 +1,13 @@
+Check Account Balance 
+Check Withdrawls Ammount
+
+IF Account Balance <= 0 
+    "Transcation Failed Balance is 0"
+Else IF Account Balance < Withdrawl Ammount 
+        "Transcation Failed Balance is Low"
+Elase If Withdrawl Ammount <= 0 
+        "Please Input a Valid Amount
+Else
+  Update Balance =  Account Balance - Withdrawl Ammount
+  Show Message "Transcation Successfull"
+  Your Remaining Account Balance is = [Update Balance]

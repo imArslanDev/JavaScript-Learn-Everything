@@ -1,0 +1,26 @@
+Task: E-Commerce Checkout Flow
+
+Take Product Price
+Take Quantity
+Take Available Stock
+Take User Balance
+
+IF Quantity <= 0
+    Show "Invalid Quantity"
+
+ELSE IF Quantity > Available Stock
+    Show "Not Enough Stock"
+
+ELSE
+    Total Price = Product Price * Quantity
+
+    IF Total Price > User Balance
+        Show "Insufficient Balance"
+
+    ELSE
+        Updated Balance = User Balance - Total Price
+        Updated Stock = Available Stock - Quantity
+
+        Show "Checkout Successful"
+        Show "Remaining Balance:", Updated Balance
+        Show "Remaining Stock:", Updated Stock
