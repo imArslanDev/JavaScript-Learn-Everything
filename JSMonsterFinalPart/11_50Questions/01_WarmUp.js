@@ -1,26 +1,20 @@
+// Q#1 Solution:
+function returnLastArrayElement(array) {
+    return array[array.length - 1]
+}
 
-// 1.******
-// function getLastElement(localArr) {
-//     return localArr[localArr.length - 1]
-// }
+let arr = ["Apple", "Mango", "Orange", "Banana"]
+let arr2 = ["Iron Man", "Spider Man", "Steave Rogers", "Dr Strange", "Dr Doom"]
+let res = returnLastArrayElement(arr)
+let res2 = returnLastArrayElement(arr2)
+console.log(res)
+console.log(res2)
 
-// let arr = [2,1,5,3,9,10, 11];
+// Q#2 Solution:
+// let combinedArray = arr.concat(arr2)
+let combinedArray = [...arr, ...arr2]
+console.log(combinedArray)
 
-// let lastElement = getLastElement(arr)
-// console.log(lastElement)
-
-
-
-// 2.*****
-
-// let arr1 = [1,2,3];
-// let arr2 = [5,8,10];
-// let arr3 = ['a','b']
-
-// // let combinationArr = arr1.concat(arr2, arr3)
-
-// let combinationArr = [...arr1, ...arr2, ...arr3]
-// console.log(combinationArr)
 
 // 3.****
 
@@ -176,17 +170,17 @@
 
 
 
-function removeDuplicate(arr){
+function removeDuplicate(arr) {
     // let set = new Set(arr);
     // return [...set]
 
-   let resultantArr = arr.filter((element, index)=>{
+    let resultantArr = arr.filter((element, index) => {
         return arr.indexOf(element) === index
     })
 
     return resultantArr;
 }
 
-let resultArr = removeDuplicate([1,2,2,5,2,3,4,1])
+let resultArr = removeDuplicate([1, 2, 2, 5, 2, 3, 4, 1])
 
 console.log(resultArr)
