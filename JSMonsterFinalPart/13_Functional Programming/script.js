@@ -65,7 +65,6 @@ Sort
 
 // console.log(double)
 
-// Pure Function: For the same input we get same output
 // PURE FUNCTIONS*****
 
 // function sum(a, b){
@@ -75,8 +74,6 @@ Sort
 
 // let result = sum(1,5)
 // console.log(result)
-
-// Impure Function: Example
 
 // let total = 0;
 
@@ -100,7 +97,6 @@ Sort
 // arr[0] = 1000;
 // console.log(arr);
 
-// Note: Functional Programming prefers jo cheezain mutable ha unko bhi directly change mt kro blki unki copy bna kr usma change kro orignal ko as it is rehne do.
 
 // let obj = {
 //     age: 21,
@@ -118,29 +114,30 @@ Sort
 // console.log(obj);
 // console.log(ReplacedObj)
 
-// const list = ["Apple", "Orange", "Banana", "Grapes"];
+// const list = ["alu","gobi","kaddu"];
 
-// function addItem(item) {
-//     const newItem = [...list, item]
-//     return newItem
+
+// function addItem(item){
+//    const newList = [...list, item]
+//    return newList;
 // }
 
-// console.log(list)
-// let newList = addItem("Mango")
+// // console.log(list)
+// let newList = addItem("began")
 // console.log(newList)
-// console.log(list)
+// // console.log(list);
 
 
-// const arr = ["Apple", "Orange", "Banana", "Grapes"];
+// let arr = ["alu", "gobi", "kaddu"];
 
 // function removeLastItem(arr) {
 //     let newArr = arr.slice(0, -1)
-//     return newArr
+//     return newArr;
 // }
 
 // let newArr = removeLastItem(arr);
-// console.log(arr) // Orignal Array
-// console.log(newArr) 
+// console.log(newArr)
+// console.log(arr)
 
 
 

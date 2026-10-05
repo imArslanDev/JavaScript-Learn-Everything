@@ -1,28 +1,71 @@
-// Function Declaration
-// function sayHi() {
-//   console.log("Hi Bro");
+// function alpha() {
+//     console.log("hello bhai")
 // }
 
-// Function Expression
-let sayHello = function () {
-  console.log("Hello Sir How are you?");
-};
+// alpha();
 
-// Arrow Function
-const calculatrSum = (num1, num2) => {
-  let total = num1 + num2;
-  console.log(total);
-};
+// function beta(){
+//     return "Mkl";
+// }
 
-// Anonymous Funtion
-setTimeout(function () {
-  console.log("I was Invoked after 1 second");
-}, 1000);
 
-// IIFE: Immediately Invoked Function Expression
-(async function () {
-  console.log("IIFE");
-})();
+// let a = beta();
+// console.log(a);
+
+// function gamma(str){
+//     console.log("hello bro", str)
+// }
+
+// gamma("manas");
+
+
+// function greet(name){
+//     console.log(1)
+//     console.log(2)
+//     return "hello bro" + " " + name;
+//     console.log("something something")
+// }
+
+// let a = greet("Lambda");
+// console.log(a);
+
+
+// function greet(name=2+3+5-2){
+//     console.log(name);
+// }
+
+// greet();
+
+// function sum(a,b){
+//     return a + b;
+// }
+
+// let sum2 = function(a, b){
+//     return a + b;
+// }
+
+// let a = sum(2, 3);
+// let b = sum2(2, 3)
+// console.log(a,b)
+
+// let alpha = ()=>{
+//     console.log("hello")
+// }
+
+// let alpha = ()=>{
+//     console.log("hello manas")
+// }
+
+// setTimeout(alpha, 3000);
+
+// immediately invoked function expression
+
+// console.log("hello")
+
+// (async function(){
+//     console.log("hello")
+// })();
+
 
 // greet();
 // greet2();
@@ -31,38 +74,52 @@ setTimeout(function () {
 //     console.log("hello")
 // }
 
+
 // let greet2 = () =>{
 //     console.log("hello 2")
 // }
 
-// Q-1 Solution
-function capitalizeFirstLetter(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
 
-let myName = capitalizeFirstLetter("king");
-console.log(myName);
+// question1
 
-// Q-2 Solution
+// function capitalizeFirstLetter(str) {
+//     console.log(str.charAt().toUpperCase() + str.slice(1))
+// }
+
+// capitalizeFirstLetter("alpha beta gamm")
+
+
 // setTimeout(() => {
-//   alert("Please login");
+//     alert("Please Login")
 // }, 5000);
 
-// Q-3 Solution
-let discountPrice = (price, discount) => {
-  let discountedAmount = price * (discount / 100);
-  console.log("Original Price:", price);
-  let finalPrice = price - discountedAmount;
-  console.log("Price After Discount:", finalPrice);
-  // return finalPrice;
-};
+// let calculateDicountedPrice = (price, discount) =>{
+//     let discountedPrice = price - price*(discount/100)
+//     return discountedPrice
+// }
 
-discountPrice(500, 10);
+// let result = calculateDicountedPrice(1550, 15);
+// console.log(result)
 
-// Q-4 Solution
-function userNameGenerator(fullName) {
-  let userName = `@${fullName}_${Math.floor(Math.random() * 20)}`;
-  console.log(userName);
+
+// function generateUsername (fullName){
+//     return "@" + fullName
+// }
+
+// console.log(generateUsername("manas"))
+
+
+function generateInstructions(color) {
+    if (color === 'green') {
+        return "go"
+    } else if (color === 'red') {
+        return "stop"
+    } else if (color === 'yellow') {
+        return "caution"
+    } else {
+        return "invalid color"
+    }
 }
 
-userNameGenerator("imArslan");
+let inst = generateInstructions("aldsjflkdsj")
+console.log(inst)
