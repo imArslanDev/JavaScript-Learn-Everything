@@ -4,7 +4,6 @@ let userEmail
 
 userEmail = "imArslan@email.com"
 // console.log(typeof userEmail); // Output: string
-
 // console.log( typeof undefined ); // undefined
 
 

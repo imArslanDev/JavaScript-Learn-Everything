@@ -12,4 +12,9 @@
 // In Values ke ilawa Baqi sab values truthy hoti hain.
 
 console.log( Boolean(NaN) ); // Output: false
-console.log("NaN Type:", typeof(NaN))
+console.log("NaN Type:", typeof(NaN)) // Output: Number
+
+let check = NaN
+if(check) {
+    console.log("Ye Nhi Chalega")
+}

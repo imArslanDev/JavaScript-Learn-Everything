@@ -1,6 +1,9 @@
 // "use strict";
 // Intro to variables in JavaScript
 
+userKaName = "Arslan King"
+console.log(userKaName)
+
 // variables can store some information 
 // we can use that information later in the program
 // we can change that information whenever we want
@@ -22,9 +25,9 @@ myName = "imArslan";
 var myName = "Mir Hadi";
 console.log(myName);
 
-// agr hum variables ko withouth var bhi declare krne ki koshsih kre to wo ho ji ga but is ki waja se bohot issues create ho skte ha so is ko avoid krna chahiye or if we want to restrict ke without var vairable declare na ho to hum strict mode use kr skte ha.
+// agr hum variables ko withouth (var) bhi declare krne ki koshsih kre to wo ho ji ga but is ki waja se bohot issues create ho skte ha so is ko avoid krna chahiye or if we want to restrict ke without var vairable declare na ho to hum strict mode use kr skte ha.
 
-// These variables are couse error in strict mode
+// These variables are cause error in strict mode
 // firstName = "Bilal"
 // console.log(firstName);
 
