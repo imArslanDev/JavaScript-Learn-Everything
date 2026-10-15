@@ -1,7 +1,7 @@
 // and && or || operators
 
 // && (and) operator
-// && operator ka case me  sari conditions true honi chahiye 
+// && operator ka case me sari conditions true honi chahiye 
 // in order to make the overall expression true.
 let a = 10;
 let b = 5;
@@ -36,3 +36,4 @@ let isOwner = true;
 
 // Logic: If EITHER condition is true, allow the action
 let canDeleteThePost = (userRole === "admin" || isOwner) ? "You can Delete Your Post" : "Not Allowed";
+console.log(canDeleteThePost)

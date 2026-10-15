@@ -34,3 +34,11 @@ while (num < 10) {
     num++;
 }
 console.log(num) // Output: 10
+
+let initialVal = 0
+let sentence = "Where there is a will there is a way"
+while (initialVal < sentence.length) {
+    console.log(sentence[initialVal])
+    initialVal++
+    
+}

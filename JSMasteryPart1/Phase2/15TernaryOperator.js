@@ -7,7 +7,7 @@ console.log(canVote); // Output: Yes, you can vote.
 // Usefull when you have to assign a value based on a condition
 let number = 7;
 let type = number % 2 === 0 ? "Even" : "Odd";
-console.log(number + " is an " + type + " number."); // Output: 7 is an Odd number.
+console.log(`${number} is an ${type} number`); // Output: 7 is an Odd number.
 
 // Revision
 console.log("====== Revision ======");
@@ -27,3 +27,10 @@ const result =
       : score >= 70
         ? "Good Reuslt"
         : "Can Be Improved";
+
+console.log("===================== Look From Here ========================")
+
+let dataState = "Response"
+let checkDataStatus = dataState == "Request" ? "Request Sent To Server Successfully" : dataState == "Response" ? "Server Send The Response Successfully" : "No Status Available"
+
+console.log(checkDataStatus)
