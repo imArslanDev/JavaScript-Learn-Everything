@@ -18,17 +18,12 @@
 // Revision
 console.log("===== Revision =====");
 
-let num = 4;
-let count = 1;
-let total = ""; // Fix: Initialize with empty string
-
+let tableOf = 5
+let count = 1
+let total = "" 
 while (count <= 10) {
-  total += `${num} X ${count} = ${num * count}\n`;
-  count++;
+  total += `${tableOf} X ${count} = ${tableOf * count}\n`
+  count++
 }
 
 console.log(total);
-// By Applying Formula
-let number = 100;
-let totalSum = (number * (number + 1)) / 2;
-console.log("By Using Math Formula:", totalSum)
