@@ -1,7 +1,7 @@
 // Spread Operator
 
 // This will happen BCZ Strings are also iterable like Arrays
-const newArray = [..."King"] // Output: ["A", "p", "p", "l", "e"]
+const newArray = [..."Apple"] // Output: ["A", "p", "p", "l", "e"]
 // console.log(newArray);
 
 // Note: kisi bhi object ma same key 2 bar nhi askti sirf 1 hi bar add hoti ha
@@ -41,19 +41,24 @@ const newObj = {
   key6: "Value6",
 };
 console.log("New Object with containing cloned Objects:", newObj);
-obj1["unique key"] = "Unique Value"
-console.log("Obj1:", obj1)
+// obj1["unique key"] = "Unique Value"
+// console.log("Obj1:", obj1)
 
 
 // The Way we have spreading Strings in Arrays we can do the same in the Objects as well
-const objStr = {..."Hundred"}
-// console.log(objStr)
-
 const createNewObjWithString = { ..."Apple" }; 
-// Expected Output: { '0': 'A', '1': 'p', '2': 'p', '3': 'l', '4': 'e' }
+// Expected Output: {
+//  '0': 'A',
+//  '1': 'p',
+//  '2': 'p', 
+//  '3': 'l',
+//  '4': 'e' 
+// }
 
 const createNewObjWithArray = { ...["Item1", "Item2", "Item3"] };
- // Expected Output: { '0': 'Item1', '1': 'Item2', '2': 'Item3' }
+console.log(createNewObjWithArray)
+console.log(createNewObjWithArray[0])
+//  // Expected Output: { '0': 'Item1', '1': 'Item2', '2': 'Item3' }
  
 // console.log(createNewObjWithString);
 // console.log(createNewObjWithArray);

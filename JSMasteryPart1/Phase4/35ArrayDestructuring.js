@@ -52,3 +52,16 @@ const [user1, user2, user3, ...restUsers] = users
 // console.log(user2)
 // console.log(user3)
 // console.log(restUsers) 
+
+
+const customerObj = {
+  id: 1,
+  name: "Gullu Badsha",
+  profession: "Entertainer",
+  skills: ["Dance", "Singing", "Street Fighting"] 
+}
+
+const {id, name: customerName, profession, skills} = customerObj
+
+console.log(id)
+console.log(customerName)

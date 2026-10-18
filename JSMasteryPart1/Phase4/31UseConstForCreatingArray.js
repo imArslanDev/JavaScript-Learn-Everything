@@ -8,8 +8,12 @@ const pi = 3.14
 // or recommended ha ka const ka use kr ke hi arrays ko create krain becuase let ke case ma issue ho skte hain like re-assigning issue.
 const fruits = ["Apple", "Mango", "Grapes", "Banana"];
 fruits.push("Strawberry" , "Kivi")
+fruits.pop()
+const slicedFruitArr = fruits.slice(0, 3)
+console.log("sliced Array:", slicedFruitArr)
+console.log("Original Fruits Array", fruits)
+
 // fruits = ["Apple", "Mango"]; // But ye const ke case ma kro ga to error a jai ga
-console.log(fruits)
 
 // Issues with let
 let myFruits = ["Apple", "Mango", "Grapes", "Banana"];

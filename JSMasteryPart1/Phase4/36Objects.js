@@ -33,6 +33,8 @@ console.log(person["my hobbies"])
 // how to add key value pair to objects
 person.gender = "male"
 person["designation"] = "Senior Software Engineer"
+person.salary = "200K"
+person["Mother Language"] = "Urdu"
 console.log(person)
 
 
