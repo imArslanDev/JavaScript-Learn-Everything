@@ -20,3 +20,10 @@ const app = () => {
   console.log(mul(2, 10));
 };
 app();
+
+
+// Iska Output ye ho ga: 
+// Hello From My Func
+// Inside App
+// The Sum of 10 + 20 is 30
+// The Multiplication of 2 x 10 is 20

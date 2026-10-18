@@ -6,21 +6,26 @@ function sayHappyBirthday() {
 
 sayHappyBirthday();
 sayHappyBirthday();
-sayHappyBirthday();
-sayHappyBirthday();
 
 // Ye jo person mane add kia ha (person) parenthesis ma isko kehte ha paramter
-// Technical Term: birthdayWishFunction function ma 1 paramter le rha ha person
+// Technical Term: birthdayWishFunction ma 1 paramter le rha ha person
 function birthdayWishFunction(person) {
   return `Happy Birthday to you Dear ${person}`;
 }
 
 // ab function ko call krte waqt jo paramter ki value pass krte ha usko kehte ha argument
 // yaha argument ha "Arslan"
-// Asan alfaz ma: function create krte waqt jo value pass krte ha use kehte he Parameter
-// or jab function call krte waqt koi value pass krte ha use kete ha Argument
-let wishBirthdayToArslan = birthdayWishFunction("Arslan");
-console.log(wishBirthdayToArslan);
+// Asan alfaz ma: function create krte waqt jo value leta ha usa kehte he Parameter
+// or function call krte waqt unshi parameters ka againsat jo values pass krta ha una Argument kehta ha
+// Yahan 'num1' aur 'num2' kya hain? ---> Parameters (Placeholder)
+function addNumbers(num1, num2) {
+    return num1 + num2;
+}
+
+// Yahan '5' aur '10' kya hain? ---> Arguments (Actual values jo pass kiin)
+addNumbers(5, 10);
+
+console.log(birthdayWishFunction("Arslan"));
 
 // Exampel of Re-Usable Function
 function addTwoNumbers(num1, num2) {

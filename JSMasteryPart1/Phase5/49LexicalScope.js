@@ -1,51 +1,56 @@
-// Lexical Scope
+// 1. LEXICAL SCOPE & SCOPE CHAIN
 
 let requiredVal = "Presented in Global Scope";
+
 function myApp() {
   let requiredVal = "Presented inside myApp function";
+
   function myFunc() {
     let requiredVal = "Presented inside myFunc function";
+
     let myFunc2 = () => {
+      // Agar yahan 'requiredVal' comment out hai, toh JS sabse qareeb wale 
+      // outer scope (yaani 'myFunc') se value uthayegi.
       // let requiredVal = "Presented inside myFunc2 function";
-      console.log(requiredVal);
+      console.log(requiredVal); // Output: "Presented inside myFunc function"
     };
+
     myFunc2();
   }
+
   myFunc();
-  console.log(requiredVal);
+  console.log(requiredVal); // Output: "Presented inside myApp function"
 }
+
 myApp();
 
 
-// IMP: Lexical Scope & Scope Chain
 
-// 1. Lexical Scope (The Rule)
-// Lexical scope ka matlab hai ki kisi bhi function ki "boundary" kahan tak hai, yeh tabhi decide ho jata hai jab aap code *likhte* (define karte) ho.
-// Agar `myFunc2` ko `myFunc` ke andar likha gaya hai, toh uska lexical parent hamesha `myFunc` hi rahega.
+// 2. CONCEPTS REVISION & SUMMARY NOTES
 
-// 2. Scope Chain (The Process)
-// Jab JavaScript ko koi variable apne current scope mein nahi milta, toh wo apne *Outer Environment* (parent scope) mein check karta hai.
-// Is "searching" ke process ko hum *Scope Chain* kehte hain.
+/*
+   A. Lexical Scope (The Rule):
+   - Iska matlab hai ke kisi bhi function ki "boundary" kahan tak hai, yeh code likhte waqt hi 
+     (at the time of writing/defining) decide ho jata hai.
+   - Jis function ke andar jo function likha gaya hai, uska lexical parent wahi outer function rahega.
 
-//  Step-by-Step Logic OF The Above Code:
-// Agar hum `myFunc2` ke andar se `requiredVal` ko comment kar dein:
+   B. Scope Chain (The Process - "Inside to Outside"):
+   - Jab aap kisi variable ko access karte hain, toh JavaScript sabse pehle uske **current/local scope** mein dekhti hai.
+   - Agar wahan na mile, toh woh step-by-step aik step bahar (parent scope / lexical environment) move karti hai.
+   - Yeh searching tab tak chalti rehti hai jab tak variable mil na jaye, ya phir Global scope tak pahunch kar khatam na ho jaye (aur agar Global mein bhi na ho toh `ReferenceError` milta hai).
+   - *Rule:* Scope chain hamesha andar se bahar ki taraf chalti hai (Inside -> Outside). Outer scope kabhi bhi inner scope ke variables ko access nahi kar sakta.
 
-// 1. *Check Local Scope:* JavaScript `myFunc2` ke andar dekhega. Variable nahi mila?
-// 2. *Move Up (Scope Chain):* Ab wo `myFunc` (Lexical Parent) mein jayega. Wahan mil gaya toh use kar lega.
-// 3. *Keep Moving:* Agar `myFunc` mein bhi na hota, toh wo `myApp` mein jata, aur phir *Global Scope* mein.
-// 4. *The Dead End:* Agar Global mein bhi nahi milta, toh JavaScript `ReferenceError` de dega.
+   C. Closures (Bonus Concept):
+   - Lexical scope ki wajah se hi closures bante hain. 
+   - Jab ek inner function apne outer function ke variables ko "yaad" rakhta hai, bhale hi outer function execute ho kar khatam (destroy) ho chuka ho, toh is mechanism ko Closure kehte hain.
+*/
 
-// Important Rule: Scope chain hamesha *Inside to Outside* chalti hai. `myApp` kabhi bhi `myFunc` ke andar ka variable nahi utha sakta.
+// 3. CLOSURE EXAMPLE
 
-// 3. Closure (Bonus Concept)
-
-// Lexical scope ki wajah se hi *Closures* bante hain. Jab ek function apne outer scope ke variables ko "yaad" rakhta hai, bhale hi wo outer function execute hokar khatam ho chuka ho, use Closure kehte hain.
-
-// Example:
 function outer() {
   let count = 0;
   return function inner() {
-    count++; // inner function 'count' ko yaad rakhta hai because of Lexical Scope
+    count++; // Inner function lexical scope ki wajah se 'count' ko yaad rakhta hai
     console.log(count);
   };
 }
@@ -54,6 +59,3 @@ const counter = outer();
 counter(); // 1
 counter(); // 2
 counter(); // 3
-counter(); // 4
-counter(); // 5
-counter(); // 6

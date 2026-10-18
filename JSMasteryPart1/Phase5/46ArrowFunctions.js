@@ -8,7 +8,7 @@ const SumTwoNumbers = (num1, num2) => {
     return `The Sum of ${num1} + ${num2} is ${sum}`
 }
 
-// Agr Function sirf 1 hi Parameter le rha ha to usko aesa bhi likh skte ha withouth () Parenthesis ke.
+// Agr Function sirf 1 hi Parameter le rha ha to usko aesa bhi likh skte ha withouth Parenthesis () ke.
 const isOdd = number => { 
     return number % 2 !== 0 ? "Odd" : "Even"
 }

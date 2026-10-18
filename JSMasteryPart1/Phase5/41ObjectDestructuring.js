@@ -9,8 +9,13 @@ const productDimensions = {
 };
 
 const {productName, productFeatures} = productDimensions
-console.log(productName)
-console.log(productFeatures)
+const [processor, dispaly, Privacy] = productDimensions.productFeatures
+console.log(processor)
+console.log(dispaly)
+console.log(Privacy)
+
+// console.log(productName)
+// console.log(productFeatures)
 
 const brand = {
   brandName: "imArslan",

@@ -17,8 +17,12 @@ const findSumOfTwoNumbers = function (num1, num2) {
 
 console.log(findSumOfTwoNumbers(20, 34));
 
-// That's why i prefer to create functions using Function expressions becuase in the function declaration
-// i face the problem like this where i have already created the function with the name and im not
+// That's why i prefer to create functions using Function expressions BCZ in the function declaration
+// I face the problem like this where i have already created the function with the name and im not
 // getting any errors.
-function sayHello() {console.log("Hello")}
-function sayHello() {console.log("Hello From Another sayHello Function")} sayHello()
+function sayHello() { console.log("Hello") }
+
+function sayHello() { 
+  console.log("Hello From Another sayHello Function")
+} 
+sayHello()
