@@ -14,17 +14,17 @@ console.log(removedItemFromArrayEnd)
 fruits.unshift("Orange") // Add item at the start of an Array
 console.log(fruits)
 
-let removeItemFromTheStart = fruits.shift() // shift() array ke start se 1 item ko remove krta ha aur us 
+let removeItemFromTheStart = fruits.shift() // shift() array ke start se 1 item ko remove krta ha aur us ko return bhi krta ha
 console.log(removeItemFromTheStart)
 
 
-let nums = [1,2,3,4,5]
-nums.push(100)
-nums.unshift(10000)
-console.log(nums)
-nums.shift()
-nums.pop()
-console.log(nums)
+// let nums = [1,2,3,4,5]
+// nums.push(100)
+// nums.unshift(10000)
+// console.log(nums)
+// nums.shift()
+// nums.pop()
+// console.log(nums)
 
 // Who is faster
 // push and pop are reletively fast methods as compared to shift, unshift
