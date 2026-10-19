@@ -25,8 +25,11 @@ numbersArray.forEach((item, index, array) => {
   console.log(array);
 });
 
+// Diffrence ye ha ki uper hm na function bahir create kia ha and then foreach ko pas krida or yaha foreach ke andr likha ha work same hi kra ga
+
 // Perhaps forEach accept 3 arguments which is item, index & array but it is not compulsary for you to pass all of them
 // you can pass only 1 as well totally upto you and your use case.
+
 numbersArray.forEach((item) => {
   console.log(`2 x ${item} = ${item * 2}`);
 });

@@ -3,7 +3,7 @@
 const numbersArray = [3, 6, 7, 1, 2, 8, 9, 10, 4, 6];
 let sum = numbersArray.reduce((accumulator, currentValue) => {
     return accumulator + currentValue
-}, 1)
+}, 0)
 console.log(sum) // Output: 56
 
 // How it works
@@ -41,3 +41,23 @@ let reducedTotal = UserCart.reduce((accumulator, currentValue) => {
     return accumulator + currentValue.price
 }, 0) // Here this 0 is the inital value of accumulator if pass then it takes the value from the array and start from there but if we pass 0 then it start from 0 and add the price of first item to it and so on.
 console.log(reducedTotal)
+
+// ℹ️ Jab Initial Value Set krta ha to kia hota ha?
+// Jab aap reduce ke andar aakhir mein 0 pass karte hain, toh JavaScript ko pata hota hai ke loop shuru hone se pehle:
+//  1- accumulator = 0 (number)
+//  2- Pehli iteration mein currentValue = 50000 (pehla object)
+//  3- Calculation: 0 + 50000 = 50000 (Pehli dafa hi number ban gaya, sab kuch smoothly chal pada).
+
+// ℹ️ Jab Inital Value Set na krain then: 
+// Jab aap aakhir se 0 hata dete hain, toh JavaScript ka rule yeh hai ke woh array ki pehli item ({productID: 1, productName: "Laptop", price: 50000}) ko accumulator bana deta hai!
+
+// Ab dekhein pehli iteration mein kya hota hai:
+//  1- accumulator = {productID: 1, productName: "Laptop", price: 50000} (Poora object!)
+//  2- currentValue = {productID: 2, productName: "Mobile", price: 20000} (Doosra object)
+//  3- Code chalta hai: accumulator + currentValue.price
+//  Yaani: [Object Object] + 20000
+
+// Result kya aata hai?
+// [object Object]20000 (String ban jata hai!)
+
+// Aur jab agli iteration mein accumulator ek string ban chuka hota hai, toh code aage chal kar fat jata hai ya NaN/unexpected output deta hai, kyunki aap objects ke sath numbers add kar rahe hotay hain!

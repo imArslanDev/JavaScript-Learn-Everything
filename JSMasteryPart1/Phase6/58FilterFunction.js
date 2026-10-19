@@ -27,3 +27,17 @@ let users = [
 
 let filteredByFirstCharacter = users.filter((item) => item.userName.startsWith("A"))
 console.log(filteredByFirstCharacter)
+
+let userObj = [
+    {userId: 1, userName: "Alice"},
+    {userId: 2, userName: "Arslan"},
+    {userId: 3, userName: "Zoha"}
+]
+
+
+let selectedUser = "Zoha"
+
+let filderSelectedUser = userObj.filter(item => {
+    return item.userName == selectedUser
+})
+console.log(filderSelectedUser)
