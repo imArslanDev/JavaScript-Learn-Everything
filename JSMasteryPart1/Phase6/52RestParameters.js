@@ -34,3 +34,9 @@ function printAllParams(p1, p2, p3, p4, p5, ...restParams) {
 }
 
 printAllParams(10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120);
+
+
+// IMP Rules
+// Rest Parameter Hamesha Aakhri (Last) Hona Chahiye
+// Function ka andr sirf Aik Hi Rest Parameter Ho Sakta Hai 2 nhi hoskta allowed nhi ha
+// Agar aap function ko call karte waqt extra arguments pass hi na karein, toh rest parameter undefined nahi hota, balkay aik empty array ([]) ban jata hai, jo ke bohot achi baat hai kyunki aap uspe araam se array ke methods (.map(), .forEach(), .length) chala sakte hain bina kisi error ke.

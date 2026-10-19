@@ -18,5 +18,14 @@ function sumOfTwoNumsES6(num1, num2 = 0) {
     return num1 + num2
 }
 
-const ans = sumOfTwoNumsES6(10)
-console.log(ans)
+
+const userInfo = (userName, userAge=20) => {
+    console.log(userName, userAge)
+} 
+
+userInfo("Arslan")
+userInfo("Arslan", 24)
+
+
+// const ans = sumOfTwoNumsES6(10)
+// console.log(ans)

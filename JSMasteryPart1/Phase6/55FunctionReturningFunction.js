@@ -18,5 +18,5 @@ function myFunc2() {
 const greetingMessage=  myFunc2()
 greetingMessage()
 
-// IMP: agr koi function as an input leta ha 1 function ya return krta ha 1 function ko ya kisi function
-// ma ye do no kam 1 sath hota ha to aesa function ko kehta ha Higher Order Function
+// IMP: agr koi function as input leta ha 1 function ko ya return krta ha 1 function ko ya kisi function
+// ma ye do no kam 1 sath hota ha to aesa function ko kehta ha Higher Order Function (HOF)
