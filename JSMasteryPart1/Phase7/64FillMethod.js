@@ -38,3 +38,7 @@ for(let i=0; i<numArr.length; i++) {
 console.log("Result Arr:", result)
 let fillresultArr = numArr.fill(result,0, 2)
 console.log(fillresultArr)
+
+
+let sampleArray = new Array(10).fill("Loading...")
+console.log(sampleArray)

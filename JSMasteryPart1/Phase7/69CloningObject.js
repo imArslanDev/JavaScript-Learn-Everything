@@ -32,8 +32,10 @@ let personInfo = {
     email: "something@email.com"
 }
 
-let clonedObj = {...personInfo}
-let oldSchool = Object.assign({}, personInfo)
+const originalOBJ = personInfo
+const clonedOBJ = {...personInfo}
+console.log("Kia Result Bna:", originalOBJ === clonedOBJ) // fasle Botrh are diffrent in Memory
 
-console.log(personInfo === clonedObj)
-console.log(personInfo === oldSchool)
+
+let clonedUsingObjectAssing = Object.assign({}, personInfo)
+console.log("Kia Result: ", personInfo === clonedUsingObjectAssing)

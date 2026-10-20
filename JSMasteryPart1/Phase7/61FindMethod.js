@@ -26,3 +26,6 @@ let products = [
 // So in this case i will prefer to use find method
 let findProductWithID  = products.find((item) => item.productId === 520)
 console.log(findProductWithID)
+
+let findPrdWithPrice = products.find(item => item.price >= 2000 & item.price <= 5000)
+console.log("Find Item With Price:", findPrdWithPrice)

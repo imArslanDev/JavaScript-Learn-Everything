@@ -19,11 +19,11 @@ let products = [
   { productId: 640, productName: "Keyboard", price: 5000 },
 ];
 
-// Check if there is an product who's price is greater then 60K
-let checkProductsPrice = products.some((product) => product.price >= 60000);
+// Check if there is an product who's price is greater then 10K
+let checkProductsPrice = products.some((product) => product.price >= 10000);
 
 if (checkProductsPrice) {
-  console.log(`Yes Products Price Range is ${checkProductsPrice} 60K`);
+  console.log(`Yes Products Price Range is ${checkProductsPrice} 10K`);
 } else {
   console.log(`Sorry Products Not Found`);
 }

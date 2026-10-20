@@ -14,7 +14,7 @@ if (isCapitalized) {
 
 // every method myArray pr loop krega or check krega ke sare array ke elements
 // condion ko satisfy krte hoon if all the elements satisfy the condition so true return
-// krega wrna false return krega every() method boolean return lrta ha.
+// krega wrna false return krega every() method boolean return krta ha.
 
 // How it works?
 // every() method each array elements pr check krega ke us eleemnt ki
@@ -42,3 +42,7 @@ if (checkProductsPriceRange) {
 } else {
   console.log(`Sorry Products Price Range is Abobe 1 Lakh`);
 }
+
+// Checking All ProductID's are type of Number or not?
+let checkPrdID = products.every(item => typeof(item.productId) == "number")
+console.log(checkPrdID)

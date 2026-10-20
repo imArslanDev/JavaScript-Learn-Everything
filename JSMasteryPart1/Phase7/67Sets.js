@@ -12,12 +12,12 @@
 
 // Ye Dublicates Allow nhi krta to is liye unhe ignore krke just uniqe values hi store krega.
 const numbers = new Set([1,2,3,3,3,3,4,5,4,5,4,5,4,3,2,1])
-// console.log(numbers) //  Set(5) { 1, 2, 3, 4, 5 }
+console.log(numbers) //  Set(5) { 1, 2, 3, 4, 5 }
 
 // Iterable so we can loop: 
-numbers.forEach(element => {
-  console.log(element)
-});
+// numbers.forEach(element => {
+//   console.log(element)
+// });
 // console.log(numbers[0]) // Output: Undefined BCZ Index Based Access Allow nhi ha.
 
 
@@ -32,7 +32,18 @@ listing.add("Item 1");
 listing.add("Item 2");
 listing.add("Item 3");
 listing.add("Item 4");
+console.log("Size: ", listing.size)
+listing.delete("Item 1")
+console.log("After Delete:", listing)
 
+const iterator = listing.entries()
+for (const entry of iterator) {
+  console.log(entry); 
+}
+
+
+// listing.clear()
+// console.log("After Clear: ",listing)
 // Ab Yaha pr ye ["Item1", "Item2"] Array add ho jai ga Because JS ma do no martaba 1
 // new array create hua memory ma or do no martaba usko new address assign hua memoery ma
 listing.add(["ItemOne", "ItemTwo"]);
@@ -74,3 +85,9 @@ console.log(uniqueEelements);
 // Check Does it Change The Original Array?
 // No Original Array Apni Original Condition ma rhe ga.
 // console.log("Original Array:", myArray)
+
+
+const tags = ["javascript", "react", "javascript", "node", "react"];
+const uniqueTags = new Set(tags)
+console.log("Tags: ", tags)
+console.log("Unique Tags: ", uniqueTags)

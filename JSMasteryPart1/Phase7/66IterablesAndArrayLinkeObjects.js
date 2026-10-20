@@ -14,7 +14,7 @@ for(let item of [1,2,3,4,5]) {
 }
 
 // Test on Objects ❌
-// Output: TypeError: {userName: "Jhon", userAge: 25} is not iterable
+// Output: TypeError: {userName: "Jhon", userAge : 25} is not iterable
 // for(let item of {userName: "Jhon", userAge: 25}) {
 //     console.log(item) 
 // }  

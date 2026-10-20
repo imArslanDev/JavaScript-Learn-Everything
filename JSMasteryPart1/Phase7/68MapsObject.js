@@ -34,6 +34,8 @@ person.set("age", 24)
 person.set(10, "Ten")
 person.set([1,2,3,4,5], "Numbers Array")
 
+console.log("Person Ki Value:", person)
+
 // Map ke case ma values ko access krne ke liye ap Dot or Bracket Notation use nhi kr skta.
 // console.log(person.userName) // Undefined: Not Allowed
 // console.log(person["age"]) // Undefined: Not Allowed
