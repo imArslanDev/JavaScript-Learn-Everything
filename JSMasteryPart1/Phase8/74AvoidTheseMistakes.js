@@ -55,13 +55,3 @@ myFunc2();
 // Output:
 // User Name: Bilal Ahmad, Age: 30,
 // Hobby: Coding, Favorite Musician: Ali Zafar
-
-// =====================================================
-// Important Concept
-// =====================================================
-
-// bind():
-// - Function ko immediately execute nahi karta
-// - Ek naya function return karta hai
-// - `this` ko permanently bind kar deta hai
-// - Optional arguments bhi pehle se set kar sakte hain

@@ -3,7 +3,7 @@
 // 1- map is an iterable
 // 2- store data in ordered fashion
 // 3- store key value pair (like Object)
-// 4- duplicate keys are not allowed objects
+// 4- duplicate keys are not allowed in map
 
 // Diffrence B/W maps & objects
 
@@ -12,7 +12,7 @@
 // in maps you can use anything as key like array, number, string
 
 // This Syntax is also called Object Literal
-// Or in Normal Objects ke andr jo Keys hoti ha wo hamesha String ma hoti ha or bohot kam but Symmbol ma ho skti ha
+// Normal Objects ke andr jo Keys hoti ha wo hamesha String ma hoti ha or bohot kam but Symmbol ma ho skti ha
 // const person = {
 //     userName: "Alice",
 //     age: 24,
@@ -34,7 +34,7 @@ person.set("age", 24)
 person.set(10, "Ten")
 person.set([1,2,3,4,5], "Numbers Array")
 
-console.log("Person Ki Value:", person)
+// console.log("Person Ki Value:", person)
 
 // Map ke case ma values ko access krne ke liye ap Dot or Bracket Notation use nhi kr skta.
 // console.log(person.userName) // Undefined: Not Allowed

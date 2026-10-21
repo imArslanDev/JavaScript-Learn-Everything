@@ -29,11 +29,11 @@ const user1 = {
 // Arrow Function Behavior
 // =====================================================
 
-// Arrow functions apna khud ka `this` create nahi karti.
-// Ye apne parent (lexical) scope ka `this` use karti hain.
+// Arrow functions apna khud ka `this` create nahi karta.
+// Ye apne parent (lexical) scope ka `this` use karta ha.
 
 // Is example me:
-// aboutWithArrowFunc global scope me define hui hai,
+// aboutWithArrowFunc global scope me define hua hai,
 // isliye iska `this` global object ko refer karega.
 
 // Browser:
@@ -42,10 +42,10 @@ const user1 = {
 // Node.js:
 // this => global object
 
-user1.aboutWithArrowFunc.call(user1, "Coding", "Ali Zafar");
+// user1.aboutWithArrowFunc.call(user1, "Coding", "Ali Zafar");
 
 // Output:
-// User Name: undefined, Age: undefined ...
+// User Name: undefined, Age: undefined, Hobby: Coding, Favorite Musician: Ali Zafar
 
 // Important:
 // call(), apply(), aur bind()
@@ -58,11 +58,11 @@ user1.aboutWithArrowFunc.call(user1, "Coding", "Ali Zafar");
 // Regular functions ka `this`
 // function call par depend karta hai.
 
-user1.aboutWithClassicFunc.call(
-  user1,
-  "Coding",
-  "Ali Zafar"
-);
+// user1.aboutWithClassicFunc.call(
+//   user1,
+//   "Coding",
+//   "Ali Zafar"
+// );
 
 // Output:
 // User Name: Bilal Ahmad, Age: 30,
@@ -71,33 +71,33 @@ user1.aboutWithClassicFunc.call(
 // Yahan:
 // `this` => user1
 
-// Kyunki function user1 object ke context me call hui hai.
+// Kyunki function user1 object ke context me call hua hai.
 
 // =====================================================
 // Nested Object Example
 // =====================================================
 
-const parentObj = {
-  userName: "Parent Object",
+// const parentObj = {
+//   userName: "Parent Object",
 
-  childObj: {
-    userName: "Bilal Ahmad",
-    age: 30,
+//   childObj: {
+//     userName: "Bilal Ahmad",
+//     age: 30,
 
-    aboutWithArrowFunc: (hobby, favMusician) => {
-      console.log(this);
+//     aboutWithArrowFunc: (hobby, favMusician) => {
+//       console.log(this);
 
-      console.log(
-        `User Name: ${this.userName}, Age: ${this.age}, Hobby: ${hobby}, Favorite Musician: ${favMusician}`,
-      );
-    },
-  },
-};
+//       console.log(
+//         `User Name: ${this.userName}, Age: ${this.age}, Hobby: ${hobby}, Favorite Musician: ${favMusician}`,
+//       );
+//     },
+//   },
+// };
 
-parentObj.childObj.aboutWithArrowFunc(
-  "Coding",
-  "Ali Zafar"
-);
+// parentObj.childObj.aboutWithArrowFunc(
+//   "Coding",
+//   "Ali Zafar"
+// );
 
 // Output:
 // User Name: undefined, Age: undefined ...
@@ -115,7 +115,7 @@ parentObj.childObj.aboutWithArrowFunc(
 
 // Arrow Function:
 // - Apna `this` nahi hota
-// - Parent scope ka `this` inherit karti hai
+// - Parent scope ka `this` inherit karta ha
 // - call(), apply(), bind() iska `this` change nahi kar sakte
 
 // Regular Function:

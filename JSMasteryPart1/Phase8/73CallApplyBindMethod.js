@@ -33,7 +33,7 @@ const userTwo = {
 // Pehla argument `this` ki value set karta hai.
 // Baaki arguments normal comma-separated pass hote hain.
 
-userOne.about.call(userTwo, "Gardening", "Atif Aslam");
+// userOne.about.call(userTwo, "Gardening", "Atif Aslam");
 
 // Output:
 // User Name: Ali Zafar, Age: 25, Hobby: Gardening, Favorite Musician: Atif Aslam
@@ -43,13 +43,33 @@ userOne.about.call(userTwo, "Gardening", "Atif Aslam");
 // - "Gardening" => hobby
 // - "Atif Aslam" => favMusician
 
+const custDetails = {
+  customerName: "Asif Jamil",
+  age: 30,
+  customerHistory: function (attachedSince, mostLikedServices) {
+     console.log(
+      `${this.customerName} is our Most Valuable Customer Since: ${attachedSince} and Mostly Purchase ${mostLikedServices} Services`,
+    );
+  }
+} 
+
+let customerInfo = {
+  customerName: "Jami",
+  age: 40  
+}
+
+// custDetails.customerHistory.call(customerInfo, "5 Years", "Web Development")
+
 // Agar call() me object pass na karein:
-userOne.about.call();
+// userOne.about.call();
 
 // Output:
-// User Name: undefined, Age: undefined ...
+// User Name: undefined, Age: undefined, Hobby: undefined, Favorite Musician: undefined
 
-// Kyunki strict mode me `this` undefined hota hai.
+// Why? BCZ hmne na hi this set kya or nahi Method ma puchse gaye Parameters pass kia
+// userOne.about.call(userOne, "Reading", "Ali Zafar" )
+// Now: User Name: undefined, Age: undefined, Hobby: undefined, Favorite Musician: undefined
+
 
 // Important Rule:
 // call() ka pehla argument hamesha object hota hai
@@ -75,9 +95,11 @@ const user2 = {
   age: 25,
 };
 
+
 // call() examples:
-about.call(user1, "Coding", "Ali Zafar");
-about.call(user2, "Sports", "Atif Aslam");
+// about.call(user1, "Cycling", "Arslan")
+// about.call(user2, "Coding", "Atif Aslam");
+
 
 // =====================================================
 // 2. apply() Method
@@ -88,8 +110,8 @@ about.call(user2, "Sports", "Atif Aslam");
 // - call() => arguments comma-separated leta hai
 // - apply() => arguments ek array me leta hai
 
-about.apply(user1, ["Teaching", "Rahat Fateh Ali Khan"]);
-about.apply(user2, ["Cricket", "Nusrat Fateh Ali Khan"]);
+// about.apply(user1, ["Teaching", "Rahat Fateh Ali Khan"]);
+// about.apply(user2, ["Cricket", "Nusrat Fateh Ali Khan"]);
 
 // =====================================================
 // 3. bind() Method
@@ -101,14 +123,13 @@ about.apply(user2, ["Cricket", "Nusrat Fateh Ali Khan"]);
 
 // Example:
 const newFunc = about.bind(user1);
+const newFunc2 = about.bind(user2)
 
 // Ab jab bhi newFunc chalega,
 // `this` hamesha user1 ko refer karega.
 
-newFunc("Coding", "Ali Zafar");
-
-// Output:
-// Name: Bilal Ahmad, Age: 30, Hobby: Coding, Favorite Musician: Ali Zafar
+// newFunc("Coding", "Ali Zafar");
+// newFunc2("Cycling", " Arslan");
 
 // =====================================================
 // bind() with Predefined Arguments
@@ -116,14 +137,14 @@ newFunc("Coding", "Ali Zafar");
 
 // bind() me arguments bhi pehle se set kar sakte hain.
 
-const newFunc2 = about.bind(
+const newFunc3 = about.bind(
   user2,
   "Book Reading",
   "Attaullah Khan Esa Khelvi"
 );
 
 // Ab arguments already bind ho chuke hain.
-newFunc2();
+// newFunc3();
 
 // Output:
 // Name: Saim Ali, Age: 25, Hobby: Book Reading,
@@ -144,32 +165,33 @@ newFunc2();
 // bind()
 // -> Function ko immediately execute nahi karta
 // -> Naya function return karta hai
-// -> this permanently bind kar deta hai
+// -> `this` ko permanently bind kar deta hai
+// - Optional arguments bhi pehle se set kar sakte hain
 
-// Practice
-const userInfo = {
-  userName: "Arslan",
-  userAge: 20,
-  info: function(hobby) {
-    return `User Name: ${this.userName}. \nUser Age: ${this.userAge}. \nUser Hobby: ${hobby}`
-  }
-}
+// // Practice
+// const userInfo = {
+//   userName: "Arslan",
+//   userAge: 20,
+//   info: function(hobby) {
+//     return `User Name: ${this.userName}. \nUser Age: ${this.userAge}. \nUser Hobby: ${hobby}`
+//   }
+// }
 
-const userInfo2 = {
-  userName: "Ali",
-  userAge: 42
-}
+// const userInfo2 = {
+//   userName: "Ali",
+//   userAge: 42
+// }
 
-const userInfo3 = {
-  userName: "Atfi",
-  userAge: 40
-}
+// const userInfo3 = {
+//   userName: "Atfi",
+//   userAge: 40
+// }
 
 
-let callMethodResult = userInfo.info.call(userInfo, "Content Creation")
-let applyMethodResult = userInfo.info.apply(userInfo2, ["Gardening"])
-let bindMethodResult = userInfo.info.bind(userInfo3, "Painting")
+// let callMethodResult = userInfo.info.call(userInfo, "Content Creation")
+// let applyMethodResult = userInfo.info.apply(userInfo2, ["Gardening"])
+// let bindMethodResult = userInfo.info.bind(userInfo3, "Painting")
 
-console.log(callMethodResult)
-console.log(applyMethodResult)
-console.log(bindMethodResult())
+// console.log(callMethodResult)
+// console.log(applyMethodResult)
+// console.log(bindMethodResult())

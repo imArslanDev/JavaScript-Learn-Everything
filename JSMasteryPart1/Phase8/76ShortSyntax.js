@@ -59,3 +59,20 @@ user1.exampleFunc2();
 
 // Modern JavaScript me object methods ke liye
 // short syntax zyada readable aur clean mana jata hai.
+
+const newUserOperationsObject = {
+  userName: "Atif",
+  age: "30",
+  city: "Lahore",
+  postCreation(topic) {
+    console.log(`${this.userName} Created a New Post on the topic of:${topic}`)
+  }
+}
+
+
+const userOne = {
+  userName: "Jamal Shah",
+  age: 40
+}
+
+newUserOperationsObject.postCreation.call(userOne, "Self Awareness")
