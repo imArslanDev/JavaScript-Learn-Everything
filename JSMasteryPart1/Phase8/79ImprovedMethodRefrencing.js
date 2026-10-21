@@ -56,22 +56,22 @@ const user2 = createUser(
 // Method Calls
 // =====================================================
 
-console.log(user1);
+// console.log(user1);
 
-console.log(
-  "Calling about() for User1:",
-  user1.about()
-);
+// console.log(
+//   "Calling about() for User1:",
+//   user1.about()
+// );
 
-console.log(
-  "Calling about() for User2:",
-  user2.about()
-);
+// console.log(
+//   "Calling about() for User2:",
+//   user2.about()
+// );
 
-console.log(
-  "Calling isEligibleForVote() for User1:",
-  user1.isEligibleForVote()
-);
+// console.log(
+//   "Calling isEligibleForVote() for User1:",
+//   user1.isEligibleForVote()
+// );
 
 // Output:
 // HM Arslan is 20 years old
@@ -113,8 +113,7 @@ console.log(
 // Previous Approach:
 // user.about = userMethods.about
 
-// Yahan:
-// hume manually methods assign karne padte the.
+// Yahan manually methods assign karne padte the.
 
 // New Approach:
 // Object.create(userMethods)
@@ -135,3 +134,32 @@ console.log(
 // Prototype:
 // Ek fallback object hota hai
 // jahan JavaScript missing properties/methods ko search karta hai.
+
+const methodsObject = {
+  about() {
+    return `${this.userName} is ${this.userAge} years old`;
+  },
+
+  isAllowedToDrive() {
+    return this.userAge >= 18;
+  },
+};
+
+function factoryFunctionCreateUser(userName, userAge, userEmail) {
+  const user = Object.create(methodsObject)
+  // Properties
+  user.userName = userName,
+  user.userAge = userAge,
+  user.userEmail = userEmail
+
+  return user
+}
+
+
+const userOne = factoryFunctionCreateUser("Arslan King", 20, "imArslan7061@gmail.com")
+const userTwo = factoryFunctionCreateUser("Ali Zafar", 40, "imAliZafar@gmail.com")
+
+console.log(userOne);
+console.log(userOne.about());
+console.log(userOne.isAllowedToDrive());
+console.log(userTwo.about());

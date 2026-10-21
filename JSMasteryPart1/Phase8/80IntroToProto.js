@@ -1,24 +1,17 @@
-// =========================================
 // Introduction to Prototype (__proto__)
-// =========================================
-
 const obj1 = {
   key1: "Value 1",
   key2: "Value 2",
 };
 
-// =====================================================
-// Goal
-// =====================================================
 
+// Goal:
 // Hum chahte hain:
 // Agar koi property obj2 me na mile,
 // to JavaScript automatically obj1 me search kare.
 
-// =====================================================
-// Object.create()
-// =====================================================
 
+// Object.create()
 // Object.create(obj1)
 
 // Ye:
@@ -30,10 +23,8 @@ const obj2 = Object.create(obj1);
 // Prototype Check
 console.log(obj2.__proto__);
 
-// =====================================================
-// Important Concept
-// =====================================================
 
+// Important Concept:
 // obj2 ka prototype => obj1
 
 // Isliye:
@@ -52,10 +43,8 @@ console.log(obj2.key1);
 // 3. JS obj2 ke prototype (obj1) me check karega
 // 4. key1 mil gayi -> "Value 1"
 
-// =====================================================
-// Adding Own Property
-// =====================================================
 
+// Adding Own Property
 obj2.key4 = "Value 4";
 
 console.log(obj2.key4);
@@ -66,10 +55,8 @@ console.log(obj2.key4);
 // key4 directly obj2 ke andar store hui hai,
 // isliye prototype me search nahi hoga.
 
-// =====================================================
-// Prototype Representation
-// =====================================================
 
+// Prototype Representation
 // Browser DevTools me prototype:
 // [[Prototype]]
 
@@ -77,10 +64,8 @@ console.log(obj2.key4);
 // __proto__
 
 // Dono prototype reference ko represent karte hain.
-
-// =====================================================
 // Important Note
-// =====================================================
+
 
 // JavaScript me:
 // __proto__
@@ -88,7 +73,6 @@ console.log(obj2.key4);
 // prototype
 
 // dono same cheez nahi hain.
-
 // __proto__
 // -> kisi object ka hidden prototype reference hota hai
 
@@ -98,9 +82,9 @@ console.log(obj2.key4);
 // prototype property ko
 // aage detail me padhenge.
 
-// =====================================================
+
 // Comparing Objects
-// =====================================================
+
 
 console.log(obj1 === obj2);
 
@@ -113,9 +97,9 @@ console.log(obj1 === obj2);
 // obj2 sirf obj1 ko
 // prototype ke through reference karta hai.
 
-// =====================================================
+
 // Key Concept
-// =====================================================
+
 
 // Prototype Chain:
 

@@ -126,3 +126,29 @@ console.log(user1.isEligibleForVote());
 
 // Isi problem ko solve karne ke liye:
 // Prototype aur Classes use ki jati hain.
+
+function createNewStudent(stName, stAge, stCourse, stEnrolmentStatus) {
+  const student = {
+    stName,
+    stAge,
+    stCourse,
+    stEnrolmentStatus,
+    // Methods
+    about() {
+    return `${this.stName} is Enrolled in ${this.stCourse} Course`;
+    },
+
+    isCurrentlyEnrolled() {
+      let check = this.stEnrolmentStatus === "Active" ? "Enrolled" : "Not Enrolled"
+      return check
+    }
+  }
+
+  return student
+
+}
+
+const student1 = createNewStudent("Zoha", 22, "Digital Marketing", "Active")
+console.log(student1.isCurrentlyEnrolled())
+console.log(student1.about())
+console.log(student1)
