@@ -1,6 +1,6 @@
 function createUser(userName, userAge, userEmail) {
   const user = Object.create(createUser.prototype);
-  // yaha pr Object.create() user object ke proto ko set kr rha createUser
+  // yaha pr Object.create(createUser.prototype) 1 empty Object create kr rha ha jo ki createUser ka prototype ha
   // function ka prototype object ke sath jis ma humne methods define kiye hua ha.
   // Again Proto and Prototype both are diffrent
   // Proto: Just a refrence kiska jo bhi ap chain create kro ga uska
