@@ -23,9 +23,8 @@ createUser.prototype.isEligibleForVote = function () {
 const user1 = createUser("HM Arslan", 20, "imArslan7061@gmail.com");
 const user2 = createUser("Javed Akhtar", 30, "imJaved1080@gmail.com");
 console.log(user1);
-console.log("Calling about Method For User1:", user1.about());
-console.log("Calling about Method For User2:", user2.about());
-console.log(
-  "Calling isEligibleForVote Method For User1:",
-  user1.isEligibleForVote(),
-);
+console.log("User1:", user1.about());
+console.log("User2:", user2.about());
+console.log("User1 Eligible for vote ?", user1.isEligibleForVote());
+
+console.log(createUser.prototype)

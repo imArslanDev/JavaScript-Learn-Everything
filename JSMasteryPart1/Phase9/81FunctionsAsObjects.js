@@ -1,11 +1,11 @@
-// // Note: JavaScript ma functions as a function to kam krte ha but sath hi
-// // wo as Object bhi kam krte ha so in this way functions are the combo function + object.
+// Note: JavaScript ma functions as a function to kam krte ha but sath hi
+// wo as Object bhi kam krte ha so in this way functions are the combo function + object.
 function hello() {
   console.log("Hello World");
 }
 
 
-console.log(hello.name); // this name property tells the function name.
+// console.log(hello.name); // this name property tells the function name.
 
 // Hum apna khud ka methods or properties ko add kr skta hain functions ma.
 hello.greetMessage = "Good Morning Sir Hope You're Doing Great";
@@ -18,7 +18,7 @@ hello.about = "I'm a Greeting Function"
 // Jb hum fucntion create krthe ha function hume provde kra ha free ka space jis ko bolte ha prototype
 hello.prototype; // {} ye 1 free ki sapce ha empty Object ha jis ma hum apni need ke according key value pairs add kr skte ha.
 
-console.log(hello.prototype); // ye 1 empty object ha jiske andr sirf 1 construcotr property ha or uski value bhi yehi function ha
+// console.log(hello.prototype); // ye 1 empty object ha jiske andr sirf 1 construcotr property ha or uski value bhi yehi function ha
 
 // Adding properties into hello function
 hello.prototype.userName = "imArslan"
@@ -28,6 +28,9 @@ hello.prototype.userHobbies = ["Prayer","Reading", "Exercise", "Eating", "Coding
 hello.prototype.sayHello = function () {
   console.log("Hello Beautiful Person");
 };
+
+console.log("Function Prototype Object:", hello.prototype)
+
 // hello.prototype.sayHello();
 // console.log(hello.prototype); // ab is object ma 1 method bhi ha sayHello ka name se.
 // console.log(typeof hello) // Function

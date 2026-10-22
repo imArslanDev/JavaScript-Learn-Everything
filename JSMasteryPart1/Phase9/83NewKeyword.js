@@ -32,5 +32,7 @@ CreateUser.prototype.isEligibleForVote = function () {
 // Uper Btai Gai Sare Features Tbhi Kam Krega Jub hum new keyword ka use Krenge.
 const user1 = new CreateUser("HM Arslan", 20, "imArslan7061@gmail.com");
 const user2 = new CreateUser("Javed Akhtar", 30, "imJaved1080@gmail.com");
+const user5 = new CreateUser("Zoha", 20, "zoha@gmail.com")
 console.log(user1.about())
 console.log(user2)
+console.log(user5.isEligibleForVote())
