@@ -35,7 +35,7 @@ class CreateUserViaClass {
     // Point 1: Maze Ki Bat constructor khud object return kr dega mujhe krne ki zarorat nhi
   }
   // Point 2: Uper wali Example ma mujhe Construcor Function sa bahir
-  // Prototype ma methods set kren pr rhe the but yaha pr ma direct ye kam kr skta hu.
+  // Prototype ma methods set krna pr rhe the but yaha pr ma direct ye kam kr skta hu.
   // This is how easily i can define methods here.   
   about() {
     return `${this.name} is ${this.age} years`;
@@ -44,9 +44,15 @@ class CreateUserViaClass {
   isEligibleForVote() {
     return this.age >= 18;
   }
+
   jobRole(role) {
-    console.log(role)
+    return role
   }
+}
+
+// But this is also Possible
+CreateUserViaClass.prototype.bahirWalaMethod = function() {
+  console.log(`${this.name} Ye Method Bahir sa aya ha`)
 }
 
 
@@ -58,3 +64,19 @@ console.log(userTwo.about())
 console.log(Object.getPrototypeOf(userOne))
 // Mujhe Automatricaly UserOne ke Prototype ka andr sabhi method or constructor mil jai ga.
 console.log(userOne.jobRole("Senior Software Engineer"))
+userOne.bahirWalaMethod()
+
+
+class NewUsers {
+  constructor(userName, userProfession) {
+    this.userName = userName
+    this.userProfession = userProfession
+  }
+
+  userInfo() {
+    return  `User ${this.userName} is ${this.userProfession} By Profession`
+  }
+}
+
+const newUserOne = new NewUsers("Zoha Saif", "Doctor")
+console.log(newUserOne.userInfo())

@@ -5,12 +5,12 @@
 // 3- By Default Proto ke value creatUser function ka prototype ke equal set kr dega.
 
 
-// Ye CreateUser ki trha ke functions ko Constructor Function kehte ha Because
-// Ye Hamare Liye contstract kr rha ha diffrent Objects ko.
+// Ye CreateUser ki trha ke functions ko Constructor Function kehte ha 
+// Because Ye Hamare Liye contstract kr rha ha diffrent Objects ko.
 
 // IMP: Agr Hum Koi Aesa Function Create Kr rhe ha jo ke new keyword
-// lgane se hi kam krega to us ke liye 1 Convention ha ke us function
-// ke name ko hamesha Capital Letter ka use kr ke hi Start krai ga.
+// lagane se hi kam krega to us ke liye 1 Convention ha ke us function
+// ke name ko hamesha Capital Letter ka use kr ke hi Start kra ga.
 
 function CreateUser(userName, userAge, userEmail) {
   this.userName = userName

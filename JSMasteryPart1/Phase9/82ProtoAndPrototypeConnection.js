@@ -27,4 +27,4 @@ console.log("User1:", user1.about());
 console.log("User2:", user2.about());
 console.log("User1 Eligible for vote ?", user1.isEligibleForVote());
 
-console.log(createUser.prototype)
+console.log("CreatUser Function Ka ProtoType:", createUser.prototype)

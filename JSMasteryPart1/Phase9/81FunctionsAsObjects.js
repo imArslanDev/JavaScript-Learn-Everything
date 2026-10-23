@@ -4,7 +4,6 @@ function hello() {
   console.log("Hello World");
 }
 
-
 // console.log(hello.name); // this name property tells the function name.
 
 // Hum apna khud ka methods or properties ko add kr skta hain functions ma.
@@ -18,8 +17,16 @@ hello.about = "I'm a Greeting Function"
 // Jb hum fucntion create krthe ha function hume provde kra ha free ka space jis ko bolte ha prototype
 hello.prototype; // {} ye 1 free ki sapce ha empty Object ha jis ma hum apni need ke according key value pairs add kr skte ha.
 
-// console.log(hello.prototype); // ye 1 empty object ha jiske andr sirf 1 construcotr property ha or uski value bhi yehi function ha
+console.log("Hello.Prototype:", hello.prototype); // ye 1 empty object ha jiske andr sirf 1 construcotr property ha or uski value bhi yehi function ha
 
+// Proof 
+// 1. Check karein ke prototype ke andar constructor property hai ya nahi
+console.log(hello.prototype.constructor);
+// Output: [Function: hello] (Yeh wahi function return karega!)
+
+// 2. Sab se bara proof: Kya constructor exactly usi function ke barabar hai?
+console.log(hello.prototype.constructor === hello);
+// Output: true
 // Adding properties into hello function
 hello.prototype.userName = "imArslan"
 hello.prototype.age = 20

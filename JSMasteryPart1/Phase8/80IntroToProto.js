@@ -21,7 +21,7 @@ const obj1 = {
 const obj2 = Object.create(obj1);
 
 // Prototype Check
-console.log(obj2.__proto__);
+console.log(" Object 2 ka Proto:", obj2.__proto__);
 
 
 // Important Concept:

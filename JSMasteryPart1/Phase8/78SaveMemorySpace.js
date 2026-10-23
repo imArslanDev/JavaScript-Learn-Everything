@@ -64,8 +64,7 @@ function createUser(userName, userAge, userEmail) {
 
   // Shared Method References
   user.about = userMethods.about;
-  user.isEligibleForVote =
-    userMethods.isEligibleForVote;
+  user.isEligibleForVote = userMethods.isEligibleForVote;
 
   return user;
 }
@@ -74,17 +73,8 @@ function createUser(userName, userAge, userEmail) {
 // Creating Users
 // =====================================================
 
-const user1 = createUser(
-  "HM Arslan",
-  20,
-  "imArslan7061@gmail.com"
-);
-
-const user2 = createUser(
-  "Javed Akhtar",
-  30,
-  "imJaved1080@gmail.com"
-);
+const user1 = createUser( "HM Arslan", 20, "imArslan7061@gmail.com");
+const user2 = createUser( "Javed Akhtar", 30, "imJaved1080@gmail.com");
 
 // =====================================================
 // Method Calls
