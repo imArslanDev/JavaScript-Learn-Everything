@@ -1,15 +1,18 @@
-// Topics
+// // Topics
 
-// Compilation
-// Code Execution
-// Why Compilation
-// How JavaScript Executes
-// What is Global Execution Context?
-// Waht is Local Execution Context?
-// Closures
+// // Compilation
+// // Code Execution
+// // Why Compilation
+// // How JavaScript Executes
+// // What is Global Execution Context?
+// // Waht is Local Execution Context?
+// // Closures
 
-console.log(this)
-console.log(window)
-console.log(firstName)
-var firstName = "Jhon Wick" 
-console.log(firstName)
+
+console.log('Start starts')
+
+setTimeout(() => {
+    console.log("This is form the Task Queue (setTimeOut)")
+}, 0);
+
+console.log("Script ends")
